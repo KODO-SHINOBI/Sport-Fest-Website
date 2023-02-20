@@ -184,7 +184,7 @@ main .top-container .sportivo-flag img{
 
 .flag-element{
   position: relative;
-  background: url("./images/sportivo flag.jpeg");
+  background: url("sportivo flag.jpeg");
   background-size: 150px 100%;
   width: 1px;
   height: 100%;
