@@ -1,0 +1,846 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Inconsolata&family=Merriweather&family=Montserrat:wght@200&family=Neonderthaw&family=PT+Serif&family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto+Mono&family=Roboto+Slab:wght@200&family=Sacramento&family=Tangerine&family=Tourney&display=swap');
+
+/* Color Variables */
+:root{
+  --text-color-1: #B3005E;
+  --background-color-1: #060047;
+  --red-color:rgba(255,62,29,255);
+  --black-color-1: #000;
+  --black-color-2:rgba(53,53,53,255);
+  --black-color-3: #BBBBBB;
+  --light-color:#FFFFE8;
+  --grey-color:rgba(240,240,240,0.9);
+  --yellow-color: #FFCD38;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: poppins,sans-serif;
+  color: white;
+  transition: 250ms;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+
+/* MAIN SECTION */
+
+main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------------------------- BACKGROUND VIDEO------------------------------*/
+
+/* .background-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (min-aspect-ratio: 16/9) {
+
+  .background-video{
+    width: 100vw;
+    height: auto;
+  }
+
+}
+
+@media (max-aspect-ratio: 16/9) {
+
+  .background-video{
+    width: auto;
+    height: 100vh;
+  }
+
+} */
+
+.video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*------------------------------- TOP CONTAINER ------------------------------*/
+main .top-container{
+  position: relative;
+  width: 100%;
+  height: 6rem;
+  background-color: rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .top-container .college-logo{
+  width: 7rem;
+  height: 95%;
+  /* border: 2px solid white; */
+  border-radius: 50%;
+  background-color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .top-container .college-logo img{
+  width: 100%;
+  height: 100%;
+}
+
+main .top-container .college-name{
+  width: 50%;
+  height: 60%;
+  /* border: 2px solid white; */
+  border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .top-container .college-name p{
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+main .top-container .college-name p span{
+  color: var(--text-color-1);
+}
+
+main .top-container .sportivo-flag{
+  width: 10rem;
+  height: 90%;
+  /* border: 2px solid white; */
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .top-container .sportivo-flag img{
+  width: 100%;
+  height: 100%;
+}
+
+.flag-container{
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+
+.flag{
+  width: 150px;
+  height: 80px;
+
+}
+
+.flag-element{
+  position: relative;
+  background: url("./images/sportivo flag.jpeg");
+  background-size: 150px 100%;
+  width: 1px;
+  height: 100%;
+  display: inline-block;
+  animation: wave 1s ease-in-out infinite alternate;
+}
+
+@keyframes wave{
+  0% {
+    top:5%;
+  }
+  100% {
+    top: -5%;
+    /* transform: rotate(60deg); */
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/*----------------------------- BOTTOM CONTAINER -----------------------------*/
+
+main .bottom-container{
+  width: 90%;
+  height: 80%;
+  /* border: 1px dashed var(--text-color-1); */
+  border-radius: 1rem;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem 0rem;
+}
+
+/* ----------------------------- TOP CONTENT--------------------------------- */
+
+main .bottom-container .top-content{
+  width: 95%;
+  height: 80%;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .bottom-container .top-content .left-content{
+  width: 50%;
+  height: 100%;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .bottom-container .top-content .left-content .video-changer{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main .bottom-container .top-content .left-content .video-changer .video-changer-content{
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+main .bottom-container .top-content .left-content .video-changer .video-changer-content .dot{
+  width: 30%;
+  height: 10px;
+  background-color: var(--text-color-1);
+  border: 1px solid var(--light-color);
+  border-radius: 50%;
+}
+
+main .bottom-container .top-content .left-content .video-changer .video-changer-content .dot:hover{
+  cursor: pointer;
+}
+
+main .bottom-container .top-content .left-content .video-changer .video-changer-content .active{
+  width: 100%;
+  height: 10px;
+  background-color: var(--text-color-1);
+  border-radius: 1rem ;
+}
+
+main .bottom-container .top-content .left-content .trophy-container{
+  width: 80%;
+  height: 100%;
+}
+
+main .bottom-container .top-content .left-content .sportivo-trophy{
+  width: 100%;
+  height: 80%;
+  /* border: 2px solid var(--text-color-1); */
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .bottom-container .top-content .left-content .sportivo-trophy img{
+  width: 70%;
+  height: 100%;
+  /* animation: rotate-image 8s linear infinite */
+}
+
+@keyframes rotate-image {
+  to{
+    transform: rotateY(360deg);
+  }
+}
+
+main .bottom-container .top-content .left-content .sportivo-title{
+  width: 95%;
+  height: 20%;
+  /* border: 2px solid var(--text-color-1); */
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .bottom-container .top-content .left-content .sportivo-title p{
+  /* font-family: 'Tangerine', cursive; */
+  font-family: 'Tourney', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  word-spacing: 10pxm;
+}
+
+main .bottom-container .top-content .left-content .sportivo-title p span{
+  color: var(--text-color-1);
+  font-family: 'Tourney', cursive;
+}
+
+main .bottom-container .top-content .right-content{
+  width: 50%;
+  height: 100%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .bottom-container .top-content .right-content .countdown, .timer-container{
+  width: 90%;
+  height: 40%;
+  /* border: 2px solid var(--text-color-1); */
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .bottom-container .top-content .right-content .countdown h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  word-spacing: 4px;
+}
+
+main .bottom-container .top-content .right-content .countdown h5{
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  word-spacing: 4px;
+  color: var(--black-color-3);
+}
+
+main .bottom-container .top-content .right-content .countdown{
+  flex-direction: column;
+  justify-content: center;
+}
+
+main .bottom-container .top-content .right-content .timer-container{
+  position: relative;
+  /* border: 2px solid var(--black-color-2); */
+  border-radius: 0.3rem;
+  background-color: rgba(0,0,0,0.3);
+}
+
+main .bottom-container .top-content .right-content .timer-container::before{
+  position: absolute;
+  top: 42%;
+  left: 0%;
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--black-color-1);
+  z-index: 1;
+}
+
+main .bottom-container .top-content .right-content .timer-container .time-content{
+  position: relative;
+  width: 20%;
+  height: 100%;
+  padding: 0 0.3rem;
+  /* background-color: rgba(0,0,0,0.1); */
+  /* border: 2px solid var(--text-color-1); */
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .bottom-container .top-content .right-content .timer-container .time-content::after{
+  position: absolute;
+  top: 1.5rem;
+  right: -1.5rem;
+  content: ":";
+  font-size: 2rem;
+  height: 50%;
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  from{
+    color: var(--black-color-1);
+  }
+  to{
+    color: var(--light-color);
+  }
+}
+
+main .bottom-container .top-content .right-content .timer-container .time-content:last-child::after{
+  content: "";
+}
+
+main .bottom-container .top-content .right-content .timer-container .time-content .time{
+  position: relative;
+  width:95%;
+  height: 60%;
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+  background-color: var(--black-color-2);
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .bottom-container .top-content .right-content .timer-container .time-content .time::before{
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  content: "";
+  width: 6px;
+  height:6px;
+  background-color: var(--text-color-1);
+  border-radius: 50%;
+}
+
+main .bottom-container .top-content .right-content .timer-container .time-content .time-text{
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: 400;
+  margin-top: 5px;
+  color: var(--black-color-3);
+}
+
+main .bottom-container .top-content .right-content .timer-container .time-content .time-text::after{
+  position: absolute;
+  bottom: -5px;
+  left: 20%;
+  content: "";
+  width: 12px;
+  height: 2px;
+  background-color: var(--text-color-1);
+}
+
+
+/* ---------------------------- BOTTOM CONTENT-------------------------------- */
+
+main .bottom-container .bottom-content {
+  width: 90%;
+  height: 20%;
+  /* border: 2px solid var(--text-color-1); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .bottom-container .bottom-content .home-btn-container{
+  width: 30%;
+  height: 60%;
+  /* border: 2px solid var(--text-color-1); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .bottom-container .bottom-content .home-btn-container .home-btn{
+  width: 3rem;
+  height: 3rem;
+}
+
+main .bottom-container .bottom-content .home-btn-container .home-btn a{
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--text-color-1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .bottom-container .bottom-content .home-btn-container .home-btn a span{
+  color: var(--text-color-1);
+  font-size: 2rem;
+  font-weight: 600;
+  /* margin-right: 0.5rem; */
+}
+
+main .bottom-container .bottom-content .home-btn-container .home-btn a h4{
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
+  display: none;
+}
+
+main .bottom-container .bottom-content .home-btn-container .home-btn a:hover{
+  cursor: pointer;
+  transform: scale(1.2) rotate(45deg);
+  border-width: 3px;
+  /* width: 70%;
+  height: 70%;
+  border-radius: 2rem; */
+}
+
+/* main .bottom-container .bottom-content .home-btn-container .home-btn:hover  h4{
+  display: flex;
+} */
+
+/* main .bottom-container .bottom-content .home-btn-container .home-btn:hover span{
+  margin-right: 0.5rem;
+} */
+
+/* -------------------------------------------------------------------------- */
+
+
+/* ----------------------------------FOOTER---------------------------------- */
+
+footer{
+  width: 90%;
+  height: 2rem;
+  border-radius: 0.3rem;
+  background-color: rgba(0,0,0,0.4);
+  margin-bottom: 1rem;
+}
+
+footer .organization{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .organization h5{
+  font-family: 'Amatic SC', cursive;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
+}
+
+footer .organization h5 span{
+  color: var(--text-color-1);
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------MEDIA QUERIES--------------------------------- */
+
+/* ----------------------FOR DEVICE WITH MAX-WIDTH:1200---------------------- */
+
+@media only screen and (max-width: 1200px){
+
+  /* ------------------------------TOP CONTENT----------------------------- */
+
+  main .top-container .college-name p{
+    font-size: 1.2rem;
+  }
+
+  /* ---------------------------------------------------------------------- */
+
+
+
+  /* ----------------------------BOTTOM CONTENT---------------------------- */
+
+    main .bottom-container .top-content .left-content .video-changer .video-changer-content .dot{
+      width: 50%;
+      height: 10px;
+    }
+
+    main .bottom-container .top-content .left-content .video-changer .video-changer-content .active{
+      width: 100%;
+      height: 8px;
+    }
+
+    main .bottom-container .top-content .left-content .sportivo-title p{
+      font-size: 2.5rem;
+    }
+
+    main .bottom-container .top-content .right-content .countdown h3{
+      font-size: 1.4rem;
+    }
+
+    main .bottom-container .top-content .right-content .countdown h5{
+      font-size: 0.5rem;
+    }
+
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+
+/* ----------------------FOR DEVICE WITH MAX-WIDTH:1200---------------------- */
+
+@media only screen and (max-width: 1000px){
+
+
+
+
+    main .bottom-container .top-content .right-content .countdown, .timer-container{
+      width: 100%;
+      height: 50%;
+    }
+
+    main .bottom-container .top-content .right-content .countdown{
+      height: 30%;
+    }
+
+    main .bottom-container .top-content .right-content .countdown h3{
+      font-size: 1.5rem;
+    }
+
+    main .bottom-container .top-content .right-content .countdown h5{
+      font-size: 1rem;
+    }
+
+    main .bottom-container .top-content .right-content .countdown{
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* main .bottom-container .top-content .right-content .timer-container::before{
+      top: 46%;
+      left: 0%;
+    } */
+
+    main .bottom-container .top-content .right-content .timer-container .time-content{
+      position: relative;
+      width: 25%;
+      height: 50%;
+    }
+
+    main .bottom-container .top-content .right-content .timer-container .time-content::after{
+      top: 0.5rem;
+      right: -0.5rem;
+    }
+
+    main .bottom-container .top-content .right-content .timer-container .time-content .time{
+      position: relative;
+      width:95%;
+      height: 60%;
+      font-size: 2rem;
+    }
+
+
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ----------------------FOR DEVICE WITH MAX-WIDTH:720---------------------- */
+
+@media only screen and (max-width: 720px){
+
+  body{
+    width: 100%;
+    height: 125rem;
+  }
+
+  /* ------------------------------TOP CONTENT----------------------------- */
+
+  main .top-container .college-name{
+    width: 80%;
+    height: 100%;
+    /* border: 2px solid white; */
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .top-container .college-name p{
+    width: 100%;
+    height: 90%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    text-align: center;
+  }
+
+  .flag-container, .flag, .flag-element, main .top-container .sportivo-flag{
+    display: none;
+  }
+
+  /* ---------------------------------------------------------------------- */
+
+
+
+  /* ----------------------------BOTTOM CONTENT---------------------------- */
+
+    main .bottom-container .top-content{
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      flex-direction: column;
+    }
+
+    main .bottom-container .top-content .left-content{
+      width: 100%;
+      height: 50%;
+      flex-direction: column-reverse;
+    }
+
+    main .bottom-container .top-content .left-content .video-changer{
+      width: 100%;
+      height: 10%;
+      justify-content: flex-start;
+    }
+
+    main .bottom-container .top-content .left-content .video-changer .video-changer-content{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    main .bottom-container .top-content .left-content .video-changer .video-changer-content .dot{
+      width: 4%;
+      height: 15px;;
+    }
+
+    main .bottom-container .top-content .left-content .video-changer .video-changer-content .active{
+      width: 2.5%;
+      height: 100%;
+    }
+
+    main .bottom-container .top-content .left-content .trophy-container{
+      width: 80%;
+      height: 80%;
+    }
+
+    main .bottom-container .top-content .left-content .sportivo-title p{
+      font-size: 2rem;
+    }
+
+    main .bottom-container .top-content .left-content .sportivo-title p span{
+      position: relative;
+      color: var(--text-color-1);
+      font-family: 'Tourney', cursive;
+      /* z-index: 1; */
+    }
+
+    main .bottom-container .top-content .left-content .sportivo-title p span::before{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      content:  "";
+      width: 5rem;
+      height: 80%;
+      background-color: var(--light-color);
+      z-index: -1;
+      transform: translateY(-50%);
+    }
+
+    main .bottom-container .top-content .right-content{
+      width: 100%;
+      height: 50%;
+      justify-content: flex-start;
+      border: 2px solid var(--text-color-1);
+      margin-top: 2rem;
+    }
+
+    main .bottom-container .top-content .right-content .countdown, .timer-container{
+      width: 100%;
+      height: 50%;
+    }
+
+    main .bottom-container .top-content .right-content .countdown{
+      height: 30%;
+    }
+
+    main .bottom-container .top-content .right-content .countdown h3{
+      font-size: 1.5rem;
+    }
+
+    main .bottom-container .top-content .right-content .countdown h5{
+      font-size: 1rem;
+    }
+
+    main .bottom-container .top-content .right-content .countdown{
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    main .bottom-container .top-content .right-content .timer-container::before{
+      top: 46%;
+      left: 0%;
+    }
+
+    main .bottom-container .top-content .right-content .timer-container .time-content{
+      position: relative;
+      width: 25%;
+      height: 50%;
+    }
+
+    main .bottom-container .top-content .right-content .timer-container .time-content::after{
+      top: 1.6rem;
+      right: -0.5rem;
+    }
+
+    main .bottom-container .top-content .right-content .timer-container .time-content .time{
+      position: relative;
+      width:95%;
+      height: 60%;
+      font-size: 2.5rem;
+    }
+
+    main .bottom-container .top-content .right-content .timer-container .time-content .time-text{
+      font-size: 0.8rem;
+    }
+
+
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
