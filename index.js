@@ -43,10 +43,10 @@ updateTime= function(day,hour,min,sec){
   let secElem= document.getElementById("second");
 
   // Updating Values
-  dayElem.innerText = day;
-  hourElem.innerText = hour;
-  minElem.innerText = min;
-  secElem.innerText = sec;
+  dayElem.innerText = 0;
+  hourElem.innerText = 0;
+  minElem.innerText = 0;
+  secElem.innerText = 0;
 
 }
 
